@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Phone, Mail, Linkedin, Github ,LeetCode } from 'lucide-react';
+import { Phone, Mail, Linkedin, Github , } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import SectionHeading from './common/SectionHeading';
 
@@ -96,12 +96,6 @@ const Contact = () => {
       label: 'GitHub',
       value: 'github.com/user163737',
       href: 'https://github.com/user163737',
-    },
-    {
-      icon: <LeetCode className="h-5 w-5" />,
-      label: 'LeetCode',
-      value: 'leetcode.com/u/vijay1612',
-      href: 'https://leetcode.com/u/vijay1612',
     },
   ];
 
