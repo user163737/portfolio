@@ -54,8 +54,8 @@ const Projects = () => {
       description: 'A recipe-sharing platform that allows users to view, submit, and comment on recipes. Built entirely using Bolt.ai.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Web App', 'Frontend', 'Backend', 'Bolt.ai'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://cosmic-crepe-64f283.netlify.app/',
+      githubLink: 'https://github.com/user163737/Tasty-Recipes/tree/main/Tasty%20Recipies%20Project',
     },
   ];
 
