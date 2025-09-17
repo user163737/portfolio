@@ -37,7 +37,7 @@ const Contact = () => {
         'service_ofmckr6',
         'template_hlke2ww',
         formRef.current!,
-        'Y4aMW-3vo-ryLRcKm'
+        '4d53bfX8aUiFkr4cQ'
       );
       
       setIsSubmitted(true);
@@ -46,6 +46,7 @@ const Contact = () => {
       // Reset submission state after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err) {
+      console.error('EmailJS Error:', err);
       setError('Failed to send message. Please try again later.');
     } finally {
       setIsSubmitting(false);
