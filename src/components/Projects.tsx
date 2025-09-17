@@ -42,6 +42,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'Simple Calculator',
+      description: 'A clean and intuitive calculator application built with modern web technologies. Features basic arithmetic operations with a responsive design and smooth user experience.',
+      image: 'https://images.pexels.com/photos/5952651/pexels-photo-5952651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      tags: ['Web App', 'Frontend'],
+      liveLink: 'https://hsvijay264737.github.io/simplecalculator/',
+      githubLink: 'https://github.com/hsvijay264737/simplecalculator',
+    },
+    {
       title: 'Tasty Recipes',
       description: 'A recipe-sharing platform that allows users to view, submit, and comment on recipes. Built entirely using Bolt.ai.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
