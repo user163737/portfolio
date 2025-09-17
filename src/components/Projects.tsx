@@ -47,7 +47,7 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/5952651/pexels-photo-5952651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Web App', 'Frontend'],
       liveLink: 'https://simple-calculator-ap-w0wr.bolt.host/',
-      githubLink: 'https://github.com/hsvijay264737/simplecalculator',
+      githubLink: 'https://github.com/user163737/Simple-Calculator/tree/main/project',
     },
     {
       title: 'Tasty Recipes',
