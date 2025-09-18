@@ -55,7 +55,7 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Web App', 'Frontend'],
       liveLink: 'https://glassmorphism-weathe-4ud3.bolt.host/',
-      githubLink: 'https://github.com/user163737/Weather-Application/tree/main/Weather-project',
+      githubLink: 'https://github.com/user163737/Weather-Application/tree/main/Weather%20Application',
     },
     {
       title: 'Tasty Recipes',
