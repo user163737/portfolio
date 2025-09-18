@@ -54,7 +54,7 @@ const Projects = () => {
       description: 'A modern weather application that provides real-time weather information for any location. Features current weather conditions, forecasts, and an intuitive user interface with responsive design.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Web App', 'Frontend'],
-      liveLink: 'https://github.com/user163737/Weather-Application',
+      liveLink: 'https://glassmorphism-weathe-4ud3.bolt.host/',
       githubLink: 'https://github.com/user163737/Weather-Application/tree/main/Weather-project',
     },
     {
