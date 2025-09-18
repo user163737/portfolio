@@ -50,6 +50,14 @@ const Projects = () => {
       githubLink: 'https://github.com/user163737/Simple-Calculator/tree/main/project',
     },
     {
+      title: 'Weather Application',
+      description: 'A modern weather application that provides real-time weather information for any location. Features current weather conditions, forecasts, and an intuitive user interface with responsive design.',
+      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      tags: ['Web App', 'Frontend'],
+      liveLink: 'https://hsvijay264737.github.io/weather-app/',
+      githubLink: 'https://github.com/hsvijay264737/weather-app',
+    },
+    {
       title: 'Tasty Recipes',
       description: 'A recipe-sharing platform that allows users to view, submit, and comment on recipes. Built entirely using Bolt.ai.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
