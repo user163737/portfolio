@@ -65,7 +65,8 @@ const About = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-primary-900 font-medium text-lg">Education</h4>
-                  <p className="text-primary-600">BCA (Bachelor of Computer Applications), Mother Theresa Degree College, Class of 2025</p>
+                  <p className="text-primary-600">Master of Computer Applications - MCA, Computer Science, JNTU Anantapur (Sep 2025 – Jun 2027)</p>
+                  <p className="text-primary-600 text-sm mt-1">Pursuing Master of Computer Applications (MCA) at Mother Theresa Institute of Engineering and Technology to strengthen my skills in software development, data structures, algorithms, and full stack technologies.</p>
                 </div>
               </div>
               
