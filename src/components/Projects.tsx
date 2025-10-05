@@ -50,6 +50,14 @@ const Projects = () => {
       githubLink: 'https://github.com/user163737/Simple-Calculator/tree/main/project',
     },
     {
+      title: 'Age Calculator',
+      description: 'A user-friendly age calculator that computes your exact age in years, months, and days. Built with a clean interface and accurate date calculations for precise age determination.',
+      image: 'https://images.pexels.com/photos/1181291/pexels-photo-1181291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      tags: ['Web App', 'Frontend'],
+      liveLink: 'https://new-chat-vg5c.bolt.host/',
+      githubLink: 'https://github.com/user163737/Age-Calculator/tree/main/Age%20Calculator',
+    },
+    {
       title: 'Weather Application',
       description: 'A modern weather application that provides real-time weather information for any location. Features current weather conditions, forecasts, and an intuitive user interface with responsive design.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
