@@ -52,7 +52,7 @@ const Projects = () => {
     {
       title: 'Age Calculator',
       description: 'A user-friendly age calculator that computes your exact age in years, months, and days. Built with a clean interface and accurate date calculations for precise age determination.',
-      image: 'https://images.pexels.com/photos/1181291/pexels-photo-1181291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://images.pexels.com/photos/1037993/pexels-photo-1037993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Web App', 'Frontend'],
       liveLink: 'https://new-chat-vg5c.bolt.host/',
       githubLink: 'https://github.com/user163737/Age-Calculator/tree/main/Age%20Calculator',
