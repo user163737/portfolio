@@ -5,24 +5,37 @@ import { motion } from 'framer-motion';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
+
+  const navItems = [
+    { name: 'Home', href: '#hero', id: 'hero' },
+    { name: 'About', href: '#about', id: 'about' },
+    { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Services', href: '#services', id: 'services' },
+    { name: 'Projects', href: '#projects', id: 'projects' },
+    { name: 'Contact', href: '#contact', id: 'contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      const sections = navItems.map(item => item.id);
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-  ];
 
   return (
     <header 
@@ -41,12 +54,29 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <a href={item.href} className="nav-link text-sm font-medium">
+          <ul className="flex space-x-8 relative">
+            {navItems.map((item, index) => (
+              <li key={item.name} className="relative">
+                <a
+                  href={item.href}
+                  className={`nav-link text-sm font-medium block pb-1 transition-colors ${
+                    activeSection === item.id ? 'text-accent' : ''
+                  }`}
+                >
                   {item.name}
                 </a>
+                {activeSection === item.id && (
+                  <motion.div
+                    layoutId="activeSection"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                    initial={false}
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30
+                    }}
+                  />
+                )}
               </li>
             ))}
           </ul>
