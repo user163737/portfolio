@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Code2, Menu, X } from 'lucide-react';
+import { Code2, Menu, X, Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '#hero', id: 'hero' },
@@ -53,37 +54,64 @@ const Header = () => {
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8 relative">
-            {navItems.map((item, index) => (
-              <li key={item.name} className="relative">
-                <a
-                  href={item.href}
-                  className={`nav-link text-sm font-medium block pb-1 transition-colors ${
-                    activeSection === item.id ? 'text-accent' : ''
-                  }`}
-                >
-                  {item.name}
-                </a>
-                {activeSection === item.id && (
-                  <motion.div
-                    layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
-                    initial={false}
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30
-                    }}
-                  />
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-        
+        <div className="hidden md:flex items-center gap-6">
+          <nav>
+            <ul className="flex space-x-8 relative">
+              {navItems.map((item, index) => (
+                <li key={item.name} className="relative">
+                  <a
+                    href={item.href}
+                    className={`nav-link text-sm font-medium block pb-1 transition-colors ${
+                      activeSection === item.id ? 'text-accent' : ''
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                  {activeSection === item.id && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                      initial={false}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30
+                      }}
+                    />
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Dark/Light Mode Toggle */}
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="relative inline-flex items-center h-9 w-16 rounded-full bg-primary-200 transition-colors hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+            aria-label="Toggle dark mode"
+          >
+            <motion.div
+              className="absolute h-7 w-7 rounded-full bg-white shadow-md flex items-center justify-center"
+              animate={{
+                x: isDarkMode ? 32 : 4
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 30
+              }}
+            >
+              {isDarkMode ? (
+                <Moon className="h-4 w-4 text-primary-700" />
+              ) : (
+                <Sun className="h-4 w-4 text-accent" />
+              )}
+            </motion.div>
+          </button>
+        </div>
+
         {/* Mobile menu button */}
-        <button 
+        <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="inline-flex items-center p-2 md:hidden text-primary-800"
           aria-expanded={isMobileMenuOpen}
@@ -95,7 +123,7 @@ const Header = () => {
       
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -105,8 +133,8 @@ const Header = () => {
             <ul className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="block py-2 nav-link text-base font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -115,6 +143,34 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Mobile Dark/Light Mode Toggle */}
+            <div className="mt-4 pt-4 border-t border-primary-200 flex items-center justify-between">
+              <span className="text-sm font-medium text-primary-700">Theme</span>
+              <button
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className="relative inline-flex items-center h-9 w-16 rounded-full bg-primary-200 transition-colors hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                aria-label="Toggle dark mode"
+              >
+                <motion.div
+                  className="absolute h-7 w-7 rounded-full bg-white shadow-md flex items-center justify-center"
+                  animate={{
+                    x: isDarkMode ? 32 : 4
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                    damping: 30
+                  }}
+                >
+                  {isDarkMode ? (
+                    <Moon className="h-4 w-4 text-primary-700" />
+                  ) : (
+                    <Sun className="h-4 w-4 text-accent" />
+                  )}
+                </motion.div>
+              </button>
+            </div>
           </div>
         </motion.div>
       )}
