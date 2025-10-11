@@ -127,7 +127,7 @@ const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg"
+          className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-primary-800 shadow-lg"
         >
           <div className="container-custom py-4">
             <ul className="flex flex-col space-y-3">
@@ -145,8 +145,8 @@ const Header = () => {
             </ul>
 
             {/* Mobile Dark/Light Mode Toggle */}
-            <div className="mt-4 pt-4 border-t border-primary-200 flex items-center justify-between">
-              <span className="text-sm font-medium text-primary-700">Theme</span>
+            <div className="mt-4 pt-4 border-t border-primary-200 dark:border-primary-700 flex items-center justify-between">
+              <span className="text-sm font-medium text-primary-700 dark:text-primary-200">Theme</span>
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
                 className="relative inline-flex items-center h-9 w-16 rounded-full bg-primary-200 transition-colors hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
