@@ -46,7 +46,7 @@ const Projects = () => {
       description: 'A clean and intuitive calculator application built with modern web technologies. Features basic arithmetic operations with a responsive design and smooth user experience.',
       image: 'https://images.pexels.com/photos/5952651/pexels-photo-5952651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Web App', 'Frontend'],
-      liveLink: 'https://simple-calculator-one-ivory.vercel.app/',
+      liveLink: 'https://simple-calculator-steel-one.vercel.app/',
       githubLink: 'https://github.com/user163737/Simple-Calculator/tree/main/project',
     },
     {
