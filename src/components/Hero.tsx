@@ -47,7 +47,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         >
-          <p className="text-primary-500 text-sm mb-2">Scroll down</p>
+          <p className="text-primary-800 text-sm mb-2">Scroll down</p>
           <ChevronDown className="w-5 h-5 text-primary-400 animate-bounce" />
         </motion.div>
       </div>
